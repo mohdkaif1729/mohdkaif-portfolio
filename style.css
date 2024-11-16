@@ -1,0 +1,369 @@
+/* google fonts roboto mono */
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+/* universal styling */
+* {
+  font-family: "Roboto Mono", monospace;
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+  scroll-behavior: smooth;
+}
+
+/* body styling */
+body {
+  width: 80vw;
+  margin: 0px auto;
+}
+
+/* header styling */
+/* nav_bar container */
+header {
+  position: sticky;
+  top: 0;
+  background-color: white;
+}
+.nav_bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+  width: 100%;
+  border: 2px solid black;
+  
+}
+
+/* left part of nav or header */
+.nav_bar .left {
+  color: rgb(42, 148, 148);
+  font-style: italic;
+}
+
+/* mid part of nav or header */
+.header_links {
+  list-style-type: none;
+  display: flex;
+  column-gap: 50px;
+}
+
+.header_links li a{
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+}
+
+.header_links li a:hover {
+  color: rgb(104, 76, 181);
+  text-decoration: underline;
+}
+
+/* right part of nav or header */
+.nav_bar .right button, .section_first .downloadcv_btn {
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.nav_bar .right button:hover, .section_first .downloadcv_btn:hover {
+  background-color: gray;
+  color: white;
+  cursor: pointer;
+}
+
+
+/* main */
+/* section_first */
+.section_first {
+  display: flex;
+  border: 2px solid red;
+  margin: 100px 0px;
+  padding: 0px 50px;
+  height: 50vh;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.left .top * {
+  margin-bottom: 15px;
+}
+
+.section_first .left {
+  width: 50%;
+}
+
+.section_first .right {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section_first .left .username {
+  display: inline-block;
+  color: white;
+  background-color: goldenrod;
+  padding: 4px;
+  border-radius: 5px;
+}
+
+.section_first .left .designation {
+  color: rgb(42, 148, 148);
+  font-size: 1.8rem;
+  display: inline-block;
+}
+
+.section_first .left h2 {
+  font-size: 1.8rem;
+}
+
+.section_first .left .about_me {
+  color: gray;
+}
+
+.hire_btn {
+  border: none;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: rgb(104, 76, 181);
+  color: white;
+  font-size: 10px;
+  border: 2px solid white;
+}
+
+.hire_btn:hover {
+  background-color: transparent;
+  border: 2px solid rgb(104, 76, 181);
+  color: rgb(104, 76, 181);
+}
+
+
+
+
+.social_media .linkdein, .social_media .github {
+  
+  height: 30px;
+  width: 30px;
+  color: black;
+  background-color: white;
+  border-radius: 50%;
+  border: none;
+  box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.127);
+}
+
+.github {
+  margin-left: 20px;
+}
+
+.profile {
+  height: 300px;
+  width: 300px;
+  border-radius: 50%;
+}
+
+
+/* section_second */
+.section_second {
+  border: 2px solid red;
+  display: grid;
+  grid-template-columns: 3fr repeat(3, 1fr);
+  column-gap: 30px;
+  padding: 10px;
+}
+
+.section_second .first {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  padding: 10px 15px;
+  box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.148);
+  border-radius: 10px;
+}
+
+.section_second .first p, h2 {
+  margin-bottom: 15px;
+}
+
+.section_second .first button {
+  border: none;
+  padding: 10px 15px;
+  border-radius: 15px;
+  background-color: rgb(78, 78, 231);
+  color: white;
+}
+
+.section_second .first button:hover {
+  background-color: rgb(37, 37, 182);
+  cursor: pointer;
+}
+
+.purple_btn {
+  background-color: rgb(104, 76, 181);
+  color: white;
+  padding: 3px 8px;
+  border-radius: 5px;
+
+  margin: 2px 0px;
+  display: inline-block;
+}
+
+.purple_btn:hover {
+  background-color: rgb(68, 41, 145);
+  cursor: pointer;
+  
+}
+
+/* section_third */
+.section_third {
+  border: 2px solid red;
+  display: flex;
+  padding: 10px;
+  justify-content: space-around;
+  margin: 100px 0px;
+
+}
+
+.section_third .project1, .project2, .project3 {
+  box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.148);
+  border-radius: 10px;
+  
+}
+.section_third .project1, .project2, .project3 {
+ display: flex;
+ flex-direction: column;
+ padding: 15px 15px;
+ align-items: center;
+ gap: 10px;
+  
+}
+
+.section_third img {
+  height: 100px;
+
+}
+
+/* footer */
+
+.footer {
+  display: flex;
+  padding: 10px ;
+  border: 2px solid red;
+}
+
+.footer .left {
+  width: 50%;
+  box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.148);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.footer .right {
+  width: 40%;
+  margin: 0px auto;
+  
+}
+
+.footer .right form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+}
+
+.footer .right input, textarea {
+  padding: 10px 15px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 2px solid rgb(131, 126, 126);
+}
+
+.footer .right button {
+  padding: 10px;
+  font: 1.2rem;
+  border: none;
+  background-color: rgb(78, 78, 231);
+  color: white;
+  border-radius: 5px;
+}
+
+
+.footer .right button:hover {
+
+  background-color: rgb(17, 17, 200);
+}
+
+.kaif {
+  margin: 100px 0px;
+}
+
+.kaif :first-child {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 900;
+  font-style: italic;
+  
+}
+
+.kaif {
+  text-align: center;
+  font-weight: 900;
+}
+
+
+@media (max-width: 980px) {
+  body {
+    width: 90vw;
+  }
+  .section_first {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    height: auto;
+    /* border-radius: 0px; */
+  }
+  .section_second {
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    gap: 30px;
+  }
+  .section_third {
+    flex-direction: column;
+    gap: 50px;
+  }
+  .footer {
+    flex-direction: column;
+    gap: 50px;
+    align-items: center;
+  }
+  .footer .left {
+    min-height: 200px;
+  }
+}
+
+@media (max-width: 780px) {
+  body {
+    width: 98%;
+  }
+  .section_first {
+    padding: 0px;
+  }
+  .section_first .left, .section_first .right {
+    width: 100%;
+  }
+  .section_second {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    gap: 30px;
+  }
+  
+  .footer .left, .footer .right {
+    width: 100%;
+  }
+  .footer .right form {
+    width:100%;
+  }
+}

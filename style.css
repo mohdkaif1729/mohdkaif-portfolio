@@ -22,6 +22,7 @@ header {
   position: sticky;
   top: 0;
   background-color: white;
+  z-index: 100;
 }
 .nav_bar {
   display: flex;
@@ -75,10 +76,23 @@ header {
 /* section_first */
 .section_first {
   display: flex;
-  border: 2px solid red;
   margin: 100px 0px;
   padding: 0px 50px;
   height: 50vh;
+  animation-name: slide;
+  animation-duration: 0.5s;
+  animation-timing-function:  linear;
+  animation-iteration-count:  1;
+}
+
+@keyframes slide {
+  from {
+    transform: translate(-100%);
+
+  }
+  to {
+    transform: translate(0px);
+  }
 }
 
 .left {
@@ -141,8 +155,6 @@ header {
 }
 
 
-
-
 .social_media .linkdein, .social_media .github {
   
   height: 30px;
@@ -153,6 +165,8 @@ header {
   border: none;
   box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.127);
 }
+
+
 
 .github {
   margin-left: 20px;
@@ -167,20 +181,43 @@ header {
 
 /* section_second */
 .section_second {
-  border: 2px solid red;
   display: grid;
   grid-template-columns: 3fr repeat(3, 1fr);
   column-gap: 30px;
   padding: 10px;
+  animation-name: slide;
+  animation-duration: 0.5s;
+  animation-timing-function:  alternate;
+  animation-iteration-count:  1;
+  animation-timeline: view();
+  animation-range-start: entry;
 }
+
+@keyframes slide {
+  from {
+    transform: translate(-120%);
+    opacity: 0;
+
+  }
+  to {
+    transform: translate(0px);
+    opacity: 1;
+
+  }
+}
+
 
 .section_second .first {
   width: 100%;
   height: 100%;
   text-align: center;
   padding: 10px 15px;
-  box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.148);
+  transition: all 0.2s ease-in-out;
   border-radius: 10px;
+}
+
+.section_second .first:hover {
+  box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.403);
 }
 
 .section_second .first p, h2 {
@@ -218,16 +255,23 @@ header {
 
 /* section_third */
 .section_third {
-  border: 2px solid red;
   display: flex;
   padding: 10px;
   justify-content: space-around;
   margin: 100px 0px;
+  animation-name: down;
+  animation-duration: 0.5s;
+  animation-timing-function:  alternate;
+  animation-iteration-count:  1;
+  animation-timeline: view();
+  animation-range-start: entry;
 
 }
 
+
+
 .section_third .project1, .project2, .project3 {
-  box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.148);
+  box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.068);
   border-radius: 10px;
   
 }
@@ -237,8 +281,20 @@ header {
  padding: 15px 15px;
  align-items: center;
  gap: 10px;
+ transition: all 0.2s ease-in-out;
+
   
 }
+
+
+
+
+.section_third .project1:hover, .section_third .project2:hover, .section_third .project3:hover {
+  box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.403);
+  
+}
+
+
 
 .section_third img {
   height: 100px;
@@ -250,17 +306,39 @@ header {
 .footer {
   display: flex;
   padding: 10px ;
-  border: 2px solid red;
+  animation-name: down;
+  animation-duration: 0.5s;
+  animation-timing-function:  alternate;
+  animation-iteration-count:  1;
+  animation-timeline: view();
+  animation-range-start: entry;
+}
+
+@keyframes down {
+  from {
+    opacity: 0;
+
+  }
+  to {
+    opacity: 1;
+
+  }
 }
 
 .footer .left {
   width: 50%;
-  box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.148);
+  box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.085);
   border-radius: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: all 0.2s ease-in-out;
+
   
+}
+
+.footer .left:hover {
+  box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.403);
 }
 .footer .right {
   width: 40%;
@@ -292,7 +370,6 @@ header {
 
 
 .footer .right button:hover {
-
   background-color: rgb(17, 17, 200);
 }
 
@@ -323,7 +400,6 @@ header {
     align-items: center;
     gap: 30px;
     height: auto;
-    /* border-radius: 0px; */
   }
   .section_second {
     grid-template-columns: 2fr 1fr;
@@ -356,10 +432,9 @@ header {
   }
   .section_second {
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-rows: 1fr repeat(3, minmax(100px, 150px));
     gap: 30px;
   }
-  
   .footer .left, .footer .right {
     width: 100%;
   }

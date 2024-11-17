@@ -23,6 +23,7 @@ header {
   top: 0;
   background-color: white;
   z-index: 100;
+  
 }
 .nav_bar {
   display: flex;
@@ -436,10 +437,9 @@ header {
     width: 100%;
     padding: 10px;
   }
-  /* header {
-    height: 250px;
-    left: 0;
-  } */
+  header {
+    height: 140px;
+  }
   .nav_bar {
     flex-direction: column;
     align-items: start;

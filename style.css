@@ -30,12 +30,11 @@ header {
   justify-content: space-between;
   height: 70px;
   width: 100%;
-  border: 2px solid black;
   
 }
 
 /* left part of nav or header */
-.nav_bar .left {
+.nav_bar .left, .hamburger .first {
   color: rgb(42, 148, 148);
   font-style: italic;
 }
@@ -59,7 +58,7 @@ header {
 }
 
 /* right part of nav or header */
-.nav_bar .right button, .section_first .downloadcv_btn {
+.nav_bar .right button, .section_first .downloadcv_btn, .hamburger .third button {
   border: none;
   padding: 10px;
   border-radius: 5px;
@@ -69,6 +68,29 @@ header {
   background-color: gray;
   color: white;
   cursor: pointer;
+}
+
+.hamburger {
+  background-color: red;
+  position: sticky;
+  top: 0;
+}
+
+.hamburger > div{
+  margin-bottom: 20px;
+
+}
+
+.hamburger .second {
+  display: flex;
+  flex-direction: column;
+}
+
+.hamburger_icon {
+  display: fixed;
+  right: 10px;
+  top: 10px;
+
 }
 
 
@@ -423,6 +445,20 @@ header {
 @media (max-width: 780px) {
   body {
     width: 98%;
+  }
+  header {
+    height: 250px;
+
+  }
+  .nav_bar {
+    flex-direction: column;
+    align-items: start;
+    gap: 20px;
+  }
+
+  .nav_bar .header_links {
+    flex-direction: column;
+    gap: 10px;
   }
   .section_first {
     padding: 0px;

@@ -207,7 +207,7 @@ header {
   grid-template-columns: 3fr repeat(3, 1fr);
   column-gap: 30px;
   padding: 10px;
-  animation-name: slide;
+  animation-name: down;
   animation-duration: 0.5s;
   animation-timing-function:  alternate;
   animation-iteration-count:  1;
@@ -215,18 +215,7 @@ header {
   animation-range-start: entry;
 }
 
-@keyframes slide {
-  from {
-    transform: translate(-120%);
-    opacity: 0;
 
-  }
-  to {
-    transform: translate(0px);
-    opacity: 1;
-
-  }
-}
 
 
 .section_second .first {
@@ -444,11 +433,12 @@ header {
 
 @media (max-width: 780px) {
   body {
-    width: 98%;
+    width: 100%;
+    padding: 10px;
   }
   header {
     height: 250px;
-
+    left: 0;
   }
   .nav_bar {
     flex-direction: column;

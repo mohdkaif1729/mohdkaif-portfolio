@@ -4,7 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>project</title>
+    <!-- style sheet -->
     <link rel="stylesheet" href="./style.css" />
+    <!-- fontawesome icons -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
@@ -14,11 +16,11 @@
     />
   </head>
   <body>
-
-
     <!-- header part -->
     <header>
+      <!-- nav bar -->
       <nav class="nav_bar">
+        <!-- left -->
         <div class="left">
           <h1>Kaif</h1>
         </div>
@@ -38,6 +40,7 @@
             </li>
           </ul>
         </div>
+        <!-- right -->
         <div class="right">
           <button>Download CV</button>
         </div>
@@ -47,8 +50,8 @@
     <!-- main part -->
     <main>
       <!-- section first -->
-
       <section class="section_first">
+        <!-- left -->
         <div class="left">
           <div class="top">
             <p class="username">Mohd Kaif</p>
@@ -65,6 +68,7 @@
               <button class="downloadcv_btn">Download CV</button>
             </div>
           </div>
+          <!-- social media -->
           <div class="social_media">
             <button class="linkdein">
               <a
@@ -81,6 +85,7 @@
             </button>
           </div>
         </div>
+        <!-- right -->
         <div class="right">
           <img
             src="./images/mohdkaif.jpeg"
@@ -90,7 +95,9 @@
         </div>
       </section>
 
+      <!-- section second -->
       <section class="section_second" id="about">
+        <!-- first -->
         <div class="first">
           <h2>My introduction</h2>
           <p>
@@ -101,6 +108,7 @@
           </p>
           <button>Download CV</button>
         </div>
+        <!-- second -->
         <div class="second">
           <h2>Frontend</h2>
           <div>
@@ -113,6 +121,8 @@
             <span class="purple_btn">React</span>
           </div>
         </div>
+
+        <!-- third -->
         <div class="third">
           <h2>Backend</h2>
           <div>
@@ -122,6 +132,8 @@
             <span class="purple_btn">C++</span>
           </div>
         </div>
+
+        <!-- fourth -->
         <div class="fourth">
           <h2>Database</h2>
           <div>
@@ -132,49 +144,60 @@
         </div>
       </section>
 
+      <!-- section third -->
       <div class="section_third" id="projects">
+        <!-- project first -->
         <div class="project1">
           <img src="./images/multipageWebsite.png" alt="" />
           <h3>Multi page Website</h3>
         </div>
+        <!-- project second -->
         <div class="project2">
           <img src="./images/netflix.png" alt="" />
           <h3>Book My show Clone</h3>
         </div>
+        <!-- project third -->
         <div class="project3">
           <img src="./images/bookMyShow.png" alt="" />
           <h3>Netflix Clone</h3>
         </div>
       </div>
-
-      <footer class="footer" id="contact">
-        <div class="left">
-          <h2>Find Me</h2>
-          <p>Email: kaif@kaif.com</p>
-          <p>tel: +91 9845678934</p>
-        </div>
-        <div class="right">
-          <!-- <div> -->
-          <form action="">
-            <input type="text" placeholder="Name" />
-            <input type="email" placeholder="Email" />
-            <textarea
-              name=""
-              id=""
-              cols="30"
-              rows="5"
-              placeholder="Message"
-            ></textarea>
-            <button>Send</button>
-          </form>
-          <!-- </div> -->
-        </div>
-      </footer>
-
-      <div class="kaif">
-        <p>Mohd Kaif</p>
-        <p>&copy; All Rights Reserved</p>
-      </div>
     </main>
+    
+    <!-- footer with contact us -->
+    <footer class="footer" id="contact">
+      <!-- left -->
+      <div class="left">
+        <h2>Find Me</h2>
+        <p>Email: kaif@kaif.com</p>
+        <p>tel: +91 9845678934</p>
+      </div>
+      <!-- right -->
+      <div class="right">
+        <!-- contact us form  -->
+        <form>
+          <input type="text" placeholder="Name"
+          name="name"
+           />
+          <input type="email" placeholder="Email"
+          name="email"
+           />
+          <textarea
+            name="message"
+            cols="30"
+            rows="5"
+            placeholder="Message"
+          ></textarea>
+          <button type="submit">Send</button>
+        </form>
+      </div>
+    </footer>
+
+    <!-- footer content -->
+    <div class="kaif">
+      <p>Mohd Kaif</p>
+      <p>&copy; All Rights Reserved</p>
+    </div>
+
   </body>
 </html>

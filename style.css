@@ -7,7 +7,7 @@
   box-sizing: border-box;
   padding: 0px;
   margin: 0px;
-  scroll-behavior: smooth;
+  scroll-behavior: smooth !important;
 }
 
 /* body styling */
@@ -23,24 +23,24 @@ header {
   top: 0;
   background-color: white;
   z-index: 100;
-  
 }
+
+/* nav bar */
 .nav_bar {
   display: flex;
   align-items: center;
   justify-content: space-between;
   height: 70px;
   width: 100%;
-  
 }
 
-/* left part of nav or header */
-.nav_bar .left, .hamburger .first {
+/* left part of nav bar */
+.nav_bar .left {
   color: rgb(42, 148, 148);
   font-style: italic;
 }
 
-/* mid part of nav or header */
+/* mid part of nav  */
 .header_links {
   list-style-type: none;
   display: flex;
@@ -58,7 +58,7 @@ header {
   text-decoration: underline;
 }
 
-/* right part of nav or header */
+/* right part of nav */
 .nav_bar .right button, .section_first .downloadcv_btn, .hamburger .third button {
   border: none;
   padding: 10px;
@@ -70,30 +70,6 @@ header {
   color: white;
   cursor: pointer;
 }
-
-.hamburger {
-  background-color: red;
-  position: sticky;
-  top: 0;
-}
-
-.hamburger > div{
-  margin-bottom: 20px;
-
-}
-
-.hamburger .second {
-  display: flex;
-  flex-direction: column;
-}
-
-.hamburger_icon {
-  display: fixed;
-  right: 10px;
-  top: 10px;
-
-}
-
 
 /* main */
 /* section_first */
@@ -108,6 +84,7 @@ header {
   animation-iteration-count:  1;
 }
 
+/* slide from left on load or reload animation */
 @keyframes slide {
   from {
     transform: translate(-100%);
@@ -118,6 +95,8 @@ header {
   }
 }
 
+
+/* left part of section first */
 .left {
   display: flex;
   flex-direction: column;
@@ -177,7 +156,7 @@ header {
   color: rgb(104, 76, 181);
 }
 
-
+/* social media in section first */
 .social_media .linkdein, .social_media .github {
   
   height: 30px;
@@ -189,8 +168,6 @@ header {
   box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.127);
 }
 
-
-
 .github {
   margin-left: 20px;
 }
@@ -200,7 +177,6 @@ header {
   width: 300px;
   border-radius: 50%;
 }
-
 
 /* section_second */
 .section_second {
@@ -216,9 +192,7 @@ header {
   animation-range-start: entry;
 }
 
-
-
-
+/* section second first part */
 .section_second .first {
   width: 100%;
   height: 100%;
@@ -249,12 +223,12 @@ header {
   cursor: pointer;
 }
 
+/* section second second, third and fourth part */
 .purple_btn {
   background-color: rgb(104, 76, 181);
   color: white;
   padding: 3px 8px;
   border-radius: 5px;
-
   margin: 2px 0px;
   display: inline-block;
 }
@@ -262,7 +236,6 @@ header {
 .purple_btn:hover {
   background-color: rgb(68, 41, 145);
   cursor: pointer;
-  
 }
 
 /* section_third */
@@ -277,16 +250,13 @@ header {
   animation-iteration-count:  1;
   animation-timeline: view();
   animation-range-start: entry;
-
 }
-
-
 
 .section_third .project1, .project2, .project3 {
   box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.068);
   border-radius: 10px;
-  
 }
+
 .section_third .project1, .project2, .project3 {
  display: flex;
  flex-direction: column;
@@ -294,27 +264,17 @@ header {
  align-items: center;
  gap: 10px;
  transition: all 0.2s ease-in-out;
-
-  
 }
-
-
-
 
 .section_third .project1:hover, .section_third .project2:hover, .section_third .project3:hover {
   box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.403);
-  
 }
-
-
 
 .section_third img {
   height: 100px;
-
 }
 
-/* footer */
-
+/* footer and contact us */
 .footer {
   display: flex;
   padding: 10px ;
@@ -326,17 +286,17 @@ header {
   animation-range-start: entry;
 }
 
+/* show elements on view when scroll from bottom to top */
 @keyframes down {
   from {
     opacity: 0;
-
   }
   to {
     opacity: 1;
-
   }
 }
 
+/* footer left part */
 .footer .left {
   width: 50%;
   box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.085);
@@ -345,19 +305,19 @@ header {
   justify-content: center;
   align-items: center;
   transition: all 0.2s ease-in-out;
-
-  
 }
 
 .footer .left:hover {
   box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.403);
 }
+
+/* footer right part */
 .footer .right {
   width: 40%;
   margin: 0px auto;
-  
 }
 
+/* footer forms  */
 .footer .right form {
   display: flex;
   flex-direction: column;
@@ -380,11 +340,11 @@ header {
   border-radius: 5px;
 }
 
-
 .footer .right button:hover {
   background-color: rgb(17, 17, 200);
 }
 
+/* footer content */
 .kaif {
   margin: 100px 0px;
 }
@@ -394,7 +354,6 @@ header {
   font-size: 2rem;
   font-weight: 900;
   font-style: italic;
-  
 }
 
 .kaif {
@@ -402,7 +361,7 @@ header {
   font-weight: 900;
 }
 
-
+/* media query on max-with 980px */
 @media (max-width: 980px) {
   body {
     width: 90vw;
@@ -432,6 +391,7 @@ header {
   }
 }
 
+/* media query on max-with 780px */
 @media (max-width: 780px) {
   body {
     width: 100%;
